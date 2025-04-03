@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: iris-worker
-        image: iriswebapp_app:v2.2.2
+        image: 590183765660.dkr.ecr.us-east-1.amazonaws.com/iris-web/iris-webapp:latest
         command: ['./wait-for-iriswebapp.sh', 'iris-app-service:8000', './iris-entrypoint.sh', 'iris-worker'] 
         env:
           - name: POSTGRES_USER
@@ -74,16 +74,16 @@ spec:
                 name: worker-data
                 key: IRIS_WORKER
         volumeMounts:
-        - name: iris-pcv
+        - name: iris-worker-pcv
           mountPath: /home/iris/downloads
           subPath: downloads
-        - name: iris-pcv
+        - name: iris-worker-pcv
           mountPath: /home/iris/user_templates
           subPath: user_templates
-        - name: iris-pcv
+        - name: iris-worker-pcv
           mountPath: /home/iris/server_data
           subPath: server_data
       volumes:
-      - name: iris-pcv
+      - name: iris-worker-pcv
         persistentVolumeClaim:
-          claimName: iris-psql-claim
+          claimName: iris-worker-claim

@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: iris-app
-        image: iriswebapp_app:v2.2.2
+        image: 590183765660.dkr.ecr.us-east-1.amazonaws.com/iris-web/iris-webapp:latest
         ports:
         - containerPort: 8000
         command: ['nohup', './iris-entrypoint.sh', 'iriswebapp'] 
@@ -66,16 +66,16 @@ spec:
                 name: app-data
                 key: POSTGRES_SERVER
         volumeMounts:
-        - name: iris-pcv
+        - name: iris-app-pcv
           mountPath: /home/iris/downloads
           subPath: downloads
-        - name: iris-pcv
+        - name: iris-app-pcv
           mountPath: /home/iris/user_templates
           subPath: user_templates
-        - name: iris-pcv
+        - name: iris-app-pcv
           mountPath: /home/iris/server_data
           subPath: server_data
       volumes:
-      - name: iris-pcv
+      - name: iris-app-pcv
         persistentVolumeClaim:
-          claimName: iris-psql-claim
+          claimName: iris-app-claim

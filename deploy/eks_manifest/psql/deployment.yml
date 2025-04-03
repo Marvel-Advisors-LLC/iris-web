@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: iris-psql-db
-        image: iriswebapp_db:v2.2.2
+        image: 590183765660.dkr.ecr.us-east-1.amazonaws.com/iris-web/iris-db:latest
         ports:
         - containerPort: 5432
         env:

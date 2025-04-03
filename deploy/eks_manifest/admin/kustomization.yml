@@ -7,4 +7,6 @@ metadata:
 resources:
   - namespace.yml
   - storageclass.yml
-  - claim.yml
+  - app-claim.yml
+  - worker-claim.yml
+  - psqk-claim.yml
