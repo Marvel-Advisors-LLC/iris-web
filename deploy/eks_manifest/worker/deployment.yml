@@ -20,7 +20,7 @@ spec:
       containers:
       - name: iris-worker
         image: 590183765660.dkr.ecr.us-east-1.amazonaws.com/iris-web/iris-webapp:latest
-        command: ['./wait-for-iriswebapp.sh', 'iris-app-service:8000', './iris-entrypoint.sh', 'iris-worker'] 
+        command: ['./wait-for-iriswebapp.sh', 'iris-app-service:80', './iris-entrypoint.sh', 'iris-worker'] 
         env:
           - name: POSTGRES_USER
             valueFrom:
