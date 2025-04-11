@@ -75,7 +75,13 @@ spec:
         - name: iris-app-pcv
           mountPath: /home/iris/server_data
           subPath: server_data
+        - name: picture-globals
+          mountPath: /opt/venv/lib/python3.12/site-packages/docx_generator/globals/picture_globals.py
+          subPath: picture_globals.py
       volumes:
       - name: iris-app-pcv
         persistentVolumeClaim:
           claimName: iris-app-claim
+      - name: picture-globals
+        configMap:
+          name: picture-globals-cm          

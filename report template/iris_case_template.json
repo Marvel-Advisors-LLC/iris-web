@@ -1,0 +1,47 @@
+{
+  "name": "phishing_template",
+  "display_name": "Phishing Incident Template",
+  "description": "Base template for handling phishing incidents reported by users.",
+  "author": "IR Team",
+  "classification": "malicious-code:phishing",
+  "title_prefix": "[PHISH]",
+  "summary": "",
+  "tags": ["phishing", "email", "user-report"],
+  "tasks": [
+    {
+      "title": "Analyze the suspicious email",
+      "description": "",
+      "tags": []
+    },
+    {
+      "title": "Identify affected users",
+      "description": "",
+      "tags": []
+    },
+    {
+      "title": "Contain the threat",
+      "description": "",
+      "tags": []
+    }
+  ],
+  "note_directories": [
+    {
+      "title": "Analysis",
+      "notes": [
+        {
+          "title": "Email review",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Actions Taken",
+      "notes": [
+        {
+          "title": "Mitigation steps",
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
